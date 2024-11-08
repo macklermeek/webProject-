@@ -1,0 +1,84 @@
+/* default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*body */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f0f5f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #006400;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.3em;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* Main section */
+main {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+/* Fun Facts */
+.fun-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Fact Cards */
+.fact-card {
+    background-color: white;
+    border: 2px solid #006400;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 100, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.fact-card h3 {
+    color: #006400;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+.fact-card h3 span {
+    font-size: 1.2em;
+}
+
+.fact-card p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+
