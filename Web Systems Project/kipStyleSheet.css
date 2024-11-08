@@ -1,0 +1,279 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #398d44;
+}
+
+/* Navbar Styling */
+ul.navbar {
+    list-style-type: none;
+    background: gray;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    position: sticky;
+    top:0;    
+    
+}
+
+li.navitem {
+    display:inline-block;
+    position: relative;
+    
+}
+
+ul.navbar li a {
+    padding: 20px 25px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color:green;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul.navbar li ul.dropdown {
+    list-style-type: none;
+    display: block;
+    width: 100%;
+    position: absolute;
+    background:gray;
+    z-index: 999;
+    display: none;
+}
+
+ul.navbar li a:hover {
+    color: black;
+    background:green;
+}
+
+ul.navbar li:hover ul.dropdown {
+    display: block;
+}
+
+/* Header Styling */
+.head {
+    text-align: center;
+    justify-content: center;
+    padding: 20px; /* Increased padding */
+    background-color: #eee;
+    width: 100%;
+    height: auto;
+}
+
+.head h1 {
+    font-size: 32px; /* Larger font size */
+    font-weight: bold;
+    color: #333;
+}
+
+/* Page Containers */
+.pagecontainer {
+    background-color: #398d44;
+    color: black;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100vh;
+    
+}
+
+.homecontainer {
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 15px;
+}
+
+.calendarcontainer {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        
+}
+
+.calendarday {
+    display: block;
+    aspect-ratio: 1;
+    min-width: fit-content;
+    text-align: left;
+    padding: 10px;
+}
+
+
+
+.calendarcontainer > div {
+    background-color: #398d44;
+}
+
+.calendarcontainer > div:nth-child(odd) {
+    background-color: white;
+}
+
+.weekdays {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    min-width: fit-content;
+}
+
+/* Content Container*/
+.maincontent {
+    background-color: green;
+    border: 2px solid black;
+    width: calc(100% - 15px);
+    border-radius: 25px;
+    justify-content:center;
+    max-height: fit-content;
+    
+}
+
+/* Image Container */
+.imagecontainer {
+    max-width: 3000px;
+    max-height: 1800px;
+    background-color: gray;
+    border: 2px solid #000000; 
+    width: calc(30% - 15px);
+    transition: transform 0.3s;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.imagecontainer img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap */
+    justify-content: center; /* Center the cards */
+    padding: 20px;
+}
+
+.card {
+    background-color: #8f8f8f;
+    border: 2px solid #000000;
+    margin: 10px; /* Space around the cards */
+    overflow: hidden;
+    width: 23%;
+    transition: transform 0.3s;
+    height: 400px;
+    border-radius: 25px;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is spaced evenly */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+}
+
+.card ul {
+    padding: 10px;
+    list-style-type: none;
+}
+
+.card-footer {
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #eee;
+    color: #333;
+    font-weight: bold;
+    height: 50px;
+}
+
+
+
+/* Content Styling */
+#aboutUs {
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+#values {
+    list-style: none;
+    padding: 15px;
+    
+}
+
+/* Footer Styling */
+.footer {
+    width: 100%;
+    background-color: black;
+    color: green;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    font-size: 18px; /* Larger font size */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .imagecontainer {
+        width: calc(45% - 20px); /* Two images per row */
+        padding: 10px;
+    }
+    .homecontainer {
+        grid-template-columns: 50% 50%;
+        
+    }
+}
+
+@media (max-width: 600px) {
+    .imagecontainer {
+        width: calc(100% - 20px); /* One image per row */
+        padding: 10px;
+    }
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .homecontainer {
+        grid-template-columns: 100%;
+        
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .calendarcontainer {
+        overflow: hidden;
+        
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* Two cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 20px); /* One card per row */
+    }
+}
