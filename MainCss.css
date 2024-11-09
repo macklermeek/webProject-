@@ -1,0 +1,46 @@
+
+h1{
+    color: grey;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.pageTitle
+{
+    width: auto;
+}
+
+
+.topcontainer
+{
+    max-width: fit-content;
+    max-height: fit-content;
+    background-color: lightseagreen;
+    color: grey;
+    
+}
+
+
+
+.container
+{
+    width: auto;
+    max-height: fit-content;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    border-width: 50px;
+    border-color: green;
+    color: grey;
+}
+.img{
+    border: 10px green;
+    border-radius: 5px;
+    padding: 5px;
+}
+.textbox{
+    width: auto;
+    max-height: fit-content;
+    float: left;
+    clear: right;
+    color:grey;
+}
