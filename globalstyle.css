@@ -1,0 +1,128 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #398d44;
+}
+
+/* Navbar Styling */
+ul.navbar {
+    list-style-type: none;
+    background: gray;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    position: sticky;
+    top:0;    
+    
+}
+
+li.navitem {
+    display:inline-block;
+    position: relative;
+    
+}
+
+ul.navbar li a {
+    padding: 20px 25px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color:green;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul.navbar li ul.dropdown {
+    list-style-type: none;
+    display: block;
+    width: 100%;
+    position: absolute;
+    background:gray;
+    z-index: 999;
+    display: none;
+}
+
+ul.navbar li a:hover {
+    color: black;
+    background:green;
+}
+
+ul.navbar li:hover ul.dropdown {
+    display: block;
+}
+
+/* Header Styling */
+.head {
+    text-align: center;
+    justify-content: center;
+    padding: 20px; /* Increased padding */
+    background-color: #eee;
+    width: 100%;
+    height: auto;
+}
+
+.head h1 {
+    font-size: 32px; /* Larger font size */
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* Page Containers */
+.flexcontainer {
+    background-color: #398d44;
+    color: black;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100vh;
+    
+}
+
+/* Image Container */
+.imagecontainer {
+    max-width: 3000px;
+    max-height: 1800px;
+    background-color: gray;
+    border: 2px solid #000000; 
+    width: calc(30% - 15px);
+    transition: transform 0.3s;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.imagecontainer img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+/* Footer Styling */
+.footer {
+    width: 100%;
+    background-color: black;
+    color: green;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    font-size: 18px; /* Larger font size */
+}
