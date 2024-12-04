@@ -1,46 +1,70 @@
+:root {
+    --primary-bg: #398d44;
+    --secondary-bg: white;
+    --primary-text: black;
+    --padding: 10px;
+    --border-radius: 5px;
+}
+
 .calendarcontainer {
     display: grid;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-    
-}
-
-.calendarday {
-display: block;
-aspect-ratio: 1;
-min-width: fit-content;
-text-align: left;
-padding: 10px;
-}
-
-
-
-.calendarcontainer > div {
-background-color: #398d44;
-}
-
-.calendarcontainer > div:nth-child(odd) {
-background-color: white;
+    grid-template-columns: repeat(7, 1fr);
+    gap: var(--padding);
+    padding: var(--padding);
 }
 
 .weekdays {
-display: block;
-text-align: center;
-padding: 15px;
-min-width: fit-content;
+    text-align: center;
+    padding: var(--padding);
+    background-color: var(--primary-bg);
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid var(--secondary-bg);
+}
+
+.calendarday {
+    background-color: var(--secondary-bg);
+    color: var(--primary-text);
+    border: 1px solid var(--primary-bg);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    aspect-ratio: 1 / 1;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calendarday:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calendarday.event {
+    background-color: var(--primary-bg);
+    color: white;
+    border: 2px solid var(--primary-text);
+}
+
+.calendarday.event p {
+    font-size: 0.9rem;
+    margin: 0.5em 0;
+}
+
+@media screen and (max-width: 900px) {
+    .calendarcontainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .weekdays {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .calendarcontainer {
-        overflow:scroll; 
+        grid-template-columns: repeat(1, 1fr);
     }
 
-    .calendarday {
-        min-width: 500px;
-        min-height: fit-content;
-
-        
-    }
-    .calendarcontainer {
-        overflow: scroll;
+    .weekdays {
+        display: none;
     }
 }
