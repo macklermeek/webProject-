@@ -26,7 +26,18 @@
 
   ## Starting the project
 
-  
+There are two way you can start this project the first is getting all your html and css files done. Then transfering them over to react.
+
+Or 
+
+Start react first and code along the way see your website come togehter in real time
+
+I would agrue to do the second one as it requires less work and when you are finished you will have a website. However it might be more diffcult and confusing if you have no prior knowledge of html and css. We did it the first way due to the 
+outlines of our project that our professor gave us. 
+
+Now whichever way you choose to go this to start an react project you will type
+
+
 
   
 
