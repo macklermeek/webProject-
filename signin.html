@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+
+<body>
+    <form action="actions.js" method="post">
+        <div class="container" style="background-color: #2e663200">
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+            </div>
+
+            <div class="container">
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            </div>
+
+            <button type="submit">Login</button>
+        </div>
+
+        <div class="container" style="background-color:#2e6632">
+            <span class="psw"><a href="#">Forgot password?</a></span>
+        </div>
+    </form>
+</body>
+
+<script>
+    const images = [
+        'images/no1.jpg',
+        'images/cooking5.jpg',
+        'images/Flag.png',
+        'images/IMG_2891.jpg'
+    ];
+    let currentIndex = 0;
+
+    function changeBackground() {
+        document.body.style.backgroundImage = `url('${images[currentIndex]}')`;
+        document.body.style.transition = "background-image 1s ease-in-out"; // Smooth transition
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    setInterval(changeBackground, 4000); // Change every 4 seconds
+    changeBackground(); // Set initial background
+</script>
+
+</html>
