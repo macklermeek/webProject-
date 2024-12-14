@@ -1,0 +1,46 @@
+.calendarcontainer {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    
+}
+
+.calendarday {
+display: block;
+aspect-ratio: 1;
+min-width: fit-content;
+text-align: left;
+padding: 10px;
+}
+
+
+
+.calendarcontainer > div {
+background-color: #398d44;
+}
+
+.calendarcontainer > div:nth-child(odd) {
+background-color: white;
+}
+
+.weekdays {
+display: block;
+text-align: center;
+padding: 15px;
+min-width: fit-content;
+}
+
+@media screen and (max-width: 600px) {
+    .calendarcontainer {
+        overflow:scroll; 
+    }
+
+    .calendarday {
+        min-width: 500px;
+        min-height: fit-content;
+
+        
+    }
+    .calendarcontainer {
+        overflow: scroll;
+    }
+}

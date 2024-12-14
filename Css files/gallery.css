@@ -1,0 +1,17 @@
+
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .imagecontainer {
+        width: calc(45% - 20px); /* Two images per row */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .imagecontainer {
+        width: calc(100% - 20px); /* One image per row */
+        padding: 10px;
+    }
+}
