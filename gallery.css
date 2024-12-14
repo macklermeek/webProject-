@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
 }
@@ -60,11 +64,11 @@ body {
     outline: 1px solid black;
 }
 
-.carousel-button .next {
+.carousel-button.next {
     right: 1rem;
 }
 
-.carousel-button .prev {
+.carousel-button.prev {
     left: 1rem;
 }
 

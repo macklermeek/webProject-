@@ -71,6 +71,7 @@ ul.navbar li:hover {
 
 ul.navbar li:hover ul.dropdown {
     display: block;
+    z-index: 5;
 }
 
 ul.navbar li ul.dropdown li a {

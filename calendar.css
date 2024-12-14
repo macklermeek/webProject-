@@ -1,33 +1,25 @@
-:root {
-    --primary-bg: #398d44;
-    --secondary-bg: white;
-    --primary-text: black;
-    --padding: 10px;
-    --border-radius: 5px;
-}
-
 .calendarcontainer {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: var(--padding);
-    padding: var(--padding);
+    gap: 10px;
+    padding: 10px;
 }
 
 .weekdays {
     text-align: center;
-    padding: var(--padding);
-    background-color: var(--primary-bg);
+    padding: 10px;
+    background-color: #398d44;
     color: white;
     font-weight: bold;
-    border-bottom: 2px solid var(--secondary-bg);
+    border-bottom: 2px solid white;
 }
 
 .calendarday {
-    background-color: var(--secondary-bg);
-    color: var(--primary-text);
-    border: 1px solid var(--primary-bg);
-    border-radius: var(--border-radius);
-    padding: var(--padding);
+    background-color: white;
+    color: black;
+    border: 1px solid #398d44;
+    border-radius: 5px;
+    padding: 10px;
     aspect-ratio: 1 / 1;
     text-align: left;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -39,9 +31,9 @@
 }
 
 .calendarday.event {
-    background-color: var(--primary-bg);
+    background-color: #398d44;
     color: white;
-    border: 2px solid var(--primary-text);
+    border: 2px solid black;
 }
 
 .calendarday.event p {
